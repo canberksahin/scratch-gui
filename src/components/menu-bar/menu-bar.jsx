@@ -634,7 +634,7 @@ class MenuBar extends React.Component {
                             username={this.props.authorUsername}
                         />
                     ) : null)}
-                    <div className={classNames(styles.menuBarItem)}>
+                    {/* <div className={classNames(styles.menuBarItem)}>
                         {this.props.canShare ? (
                             (this.props.isShowingProject || this.props.isUpdating) && (
                                 <ProjectWatcher onDoneUpdating={this.props.onSeeCommunity}>
@@ -644,11 +644,11 @@ class MenuBar extends React.Component {
                                                 className={styles.menuBarButton}
                                                 isShared={this.props.isShared}
                                                 /* eslint-disable react/jsx-no-bind */
-                                                onClick={() => {
+                                               /* onClick={() => {
                                                     this.handleClickShare(waitForUpdate);
                                                 }}
                                                 /* eslint-enable react/jsx-no-bind */
-                                            />
+                                          /*  />
                                         )
                                     }
                                 </ProjectWatcher>
@@ -661,7 +661,7 @@ class MenuBar extends React.Component {
                             ) : []
                         )}
                         {this.props.canRemix ? remixButton : []}
-                    </div>
+                    </div> */}
                     <div className={classNames(styles.menuBarItem, styles.communityButtonWrapper)}>
                         {this.props.enableCommunity ? (
                             (this.props.isShowingProject || this.props.isUpdating) && (
