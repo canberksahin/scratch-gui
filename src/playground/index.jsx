@@ -11,8 +11,8 @@ import AppStateHOC from '../lib/app-state-hoc.jsx';
 import BrowserModalComponent from '../components/browser-modal/browser-modal.jsx';
 import supportedBrowser from '../lib/supported-browser';
 
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import styles from './index.css';
-
 const appTarget = document.createElement('div');
 appTarget.className = styles.app;
 document.body.appendChild(appTarget);
@@ -21,6 +21,7 @@ if (supportedBrowser()) {
     // require needed here to avoid importing unsupported browser-crashing code
     // at the top level
     require('./render-gui.jsx').default(appTarget);
+    injectSpeedInsights();
 
 } else {
     BrowserModalComponent.setAppElement(appTarget);

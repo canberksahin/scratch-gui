@@ -92,7 +92,6 @@ import prehistoricLogo from './prehistoric-logo.svg';
 import oldtimeyLogo from './oldtimey-logo.svg';
 
 import sharedMessages from '../../lib/shared-messages';
-
 const ariaMessages = defineMessages({
     tutorials: {
         id: 'gui.menuBar.tutorialsLibrary',
@@ -113,6 +112,7 @@ const MenuBarItemTooltip = ({
             <React.Fragment>
                 {children}
             </React.Fragment>
+            
         );
     }
     return (
