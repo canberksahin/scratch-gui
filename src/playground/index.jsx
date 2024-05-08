@@ -11,7 +11,6 @@ import AppStateHOC from '../lib/app-state-hoc.jsx';
 import BrowserModalComponent from '../components/browser-modal/browser-modal.jsx';
 import supportedBrowser from '../lib/supported-browser';
 
-import { SpeedInsights } from '@vercel/speed-insights/react';
 import styles from './index.css';
 const appTarget = document.createElement('div');
 appTarget.className = styles.app;
@@ -30,7 +29,6 @@ if (supportedBrowser()) {
     // eslint-disable-next-line react/jsx-no-bind
     ReactDOM.render(
         <React.Fragment>
-            <SpeedInsights />
             <WrappedBrowserModalComponent onBack={handleBack} />
         </React.Fragment>,
         appTarget
